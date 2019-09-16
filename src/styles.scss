@@ -1,0 +1,54 @@
+@import '@angular/material/prebuilt-themes/pink-bluegrey.css';
+
+$mainFont: 'Quicksand', 'sans-serif';
+$trentsGrey: #DADFEA;
+
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: $mainFont;
+  background-color: $trentsGrey;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.content-center {
+  justify-content: center;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.image {
+  background-image: url("./assets/image.png");
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: right;
+}
+
+i {
+  outline: none;
+  cursor: pointer;
+}
+
+div {
+  outline: none;
+}
+
+span {
+  outline: none;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, sans-serif; }

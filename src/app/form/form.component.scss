@@ -1,0 +1,85 @@
+$pro: #443C30;
+$champ: #6e869e;
+$men: #ffffff;
+$women: #900000;
+$mainFont: 'Quicksand', sans-serif;
+
+
+@mixin centerDisplay() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.configurations {
+  font-family: $mainFont;
+  @include centerDisplay();
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(219, 223, 233, 0.9);
+  .closeButton {
+    font-size: 75px;
+    text-align: center;
+    position: absolute;
+    top: 5px;
+    right: 30px;
+    cursor: pointer;
+  }
+}
+
+#numberOfPlayers {
+  @include centerDisplay();
+  flex-direction: column;
+  span {
+    font-size: 72px;
+    margin-bottom: 15px;
+  }
+  form {
+    text-align: center;
+    font-size: 32px;
+    display: flex;
+    flex-direction: column;
+    div{
+      padding: 5px 75px 5px 75px;
+      margin-top: 25px;
+      box-shadow: 8px 8px 5px 0 grey;
+      //box-shadow: 3px 3px 10px 0 inset;
+    }
+    #pro {
+      color: #ffffff;
+      background-color: $pro;
+      transition: 0.7s;
+    }
+    #champion {
+      color: #ffffff;
+      background-color: $champ;
+      transition: 0.7s;
+    }
+    #men {
+      color: grey;
+      background-color: $men;
+      transition: 0.7s;
+    }
+    #women {
+      color: #ffffff;
+      background-color: $women;
+      transition: 0.7s;
+    }
+  }
+  #continue {
+    margin-top: 20px;
+    padding: 3px 25px;
+    font-size: 15px;
+  }
+  button {
+    font-size: 18px;
+    padding: 5px 75px;
+    margin-top: 15px;
+    text-align: center;
+    border: none;
+    outline: none;
+    background-color: cadetblue;
+    color: white;
+  }
+}

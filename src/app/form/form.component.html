@@ -1,0 +1,35 @@
+<div class="configurations" *ngIf="formMode == 'new'">
+  <div id="numberOfPlayers">
+      <div (click)="goBack()" class="closeButton">&#215;</div>
+      <span>Select a Tee</span>
+
+      <form id="teeForm" *ngIf="courseId == '18300' || courseId == '11819' ">
+          <button type="button" mat-raised-button id="pro" (click)="select($event)">PRO</button>
+          <button type="button" mat-raised-button id="champion" (click)="select($event)">CHAMPION</button>
+        <button type="button" mat-raised-button id="men" (click)="select($event)">MEN</button>
+          <button type="button" mat-raised-button id="women" (click)="select($event)">WOMEN</button>
+      </form>
+      <form id="teeForm" *ngIf="courseId == '19002'">
+          <button type="button" mat-raised-button id="champion" (click)="select($event)">CHAMPION</button>
+          <button type="button" mat-raised-button id="men" (click)="select($event)">MEN</button>
+          <button type="button" mat-raised-button id="women" (click)="select($event)">WOMEN</button>
+      </form>
+  </div>
+</div>
+<div class="configurations" *ngIf="formMode == 'edit'">
+        <div id="numberOfPlayers">
+            <div (click)="goBack()" class="closeButton">&#215;</div>
+            <span>Select a New Tee</span>      
+            <form id="teeForm" *ngIf="courseId == '18300' || courseId == '11819' ">
+                <button type="button" mat-raised-button id="pro" (click)="edit($event)">PRO</button>
+                <button type="button" mat-raised-button id="champion" (click)="edit($event)">CHAMPION</button>
+                <button type="button" mat-raised-button id="men" (click)="edit($event)">MEN</button>
+                <button type="button" mat-raised-button id="women" (click)="edit($event)">WOMEN</button>
+            </form>     
+            <form id="teeForm" *ngIf="courseId == '19002'">
+                <button type="button" mat-raised-button id="champion" (click)="edit($event)">CHAMPION</button>
+                <button type="button" mat-raised-button id="men" (click)="edit($event)">MEN</button>
+                <button type="button" mat-raised-button id="women" (click)="edit($event)">WOMEN</button>
+            </form>      
+        </div>
+      </div>
