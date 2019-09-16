@@ -1,15 +1,10 @@
 @import '@angular/material/prebuilt-themes/pink-bluegrey.css';
 
-$mainFont: 'Quicksand', 'sans-serif';
-$trentsGrey: #DADFEA;
-
 html, body {
   height: 100%;
   width: 100%;
   padding: 0;
   margin: 0;
-  font-family: $mainFont;
-  background-color: $trentsGrey;
 }
 
 .flex {

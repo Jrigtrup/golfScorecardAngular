@@ -1,5 +1,3 @@
-$trentsGrey: #dadfea;
-$mainFont: "Quicksand", sans-serif;
 
 @mixin centerDisplay() {
   display: flex;
@@ -90,35 +88,6 @@ $mainFont: "Quicksand", sans-serif;
   border-right: 1px solid grey;
 }
 
-.pro {
-  background-color: rgba(68, 60, 48, 0.7);
-}
-
-.champion {
-  background-color: rgba(110, 134, 158, 0.7);
-}
-
-.men {
-  background-color: rgba(255, 255, 255, 0.7);
-}
-
-.women {
-  background-color: rgba(144, 0, 0, 0.7);
-}
-
-.handiColor {
-  background-color: rgba(236, 230, 142, 0.7);
-}
-
-.parColor {
-  background-color: rgba(142, 205, 236, 0.7);
-}
-
-.holeColor {
-  background-color: rgba(193, 220, 170, 0.7);
-  border-top: 1px solid grey;
-}
-
 .popbox {
   position: relative;
 }
@@ -182,7 +151,6 @@ $mainFont: "Quicksand", sans-serif;
   height: 150%;
   z-index: 1;
   font-size: 13px;
-  background-color: $trentsGrey;
   border-radius: 10px;
   border: none;
   span {
@@ -198,7 +166,6 @@ $mainFont: "Quicksand", sans-serif;
   left: -14px;
   border-width: 7px;
   border-style: solid;
-  border-color: $trentsGrey transparent transparent transparent;
   transform: rotate(90deg);
 }
 
@@ -241,7 +208,6 @@ $mainFont: "Quicksand", sans-serif;
 }
 
 .configurations {
-  font-family: $mainFont;
   @include centerDisplay();
   flex-direction: column;
   height: 100%;
@@ -280,7 +246,7 @@ $mainFont: "Quicksand", sans-serif;
     input {
       background-color: rgba(0, 0, 0, 0.05);
       outline: none;
-      border: 1px solid $trentsGrey;
+      border: 1px solid;
       font-size: 32px;
     }
   }

@@ -115,10 +115,3 @@ export class CardComponent implements OnInit {
   }
 
 }
-
-
-
-
-// 18300 pro champion men women
-// 11819 pro champion men women
-// 19002 champion men women
