@@ -1,23 +1,14 @@
 
 <div class="image"></div>
-<div class="container">
-  <div class="topBar">
-    <div class="topBarContent">
-    </div>
-  </div>
+<div class="container"></div>
   <div class="inner">
     <div class="scoreCard" *ngIf="data">
       <div class="titleBox">
         <div>Hole</div>
-        <div [className]="tee" id="teeTitle">
-          <i id="edit" class="material-icons" [routerLink]="['/form', courseId, 'edit', gameId]">
-            edit
-          </i>
-        </div>
+        <div [className]="tee" id="teeTitle"></div>
         <div>Handicap</div>
         <div>Par</div>
       </div>
-
       <div class="scores">
         <div id="h{{ hole.hole }}" *ngFor="let hole of holes">
           <div>{{ hole.hole }}</div>
@@ -118,4 +109,3 @@
       </div>
     </div>
   </div>
-</div>

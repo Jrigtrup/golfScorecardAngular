@@ -18,19 +18,12 @@ export class CardComponent implements OnInit {
   data: any;
   game: any;
   show: boolean = false;
-  savepop: boolean = false;
 
   constructor(private courseService: CourseService, private route: ActivatedRoute, private gameService: GameService) {
   }
 
   ngOnInit() {
     this.gameId = this.route.snapshot.paramMap.get('id');
-  }
-
-  editPlayerName(element) {
-    const newName = element.target.textContent;
-    const playerId = element.target.id
-    this.game.players[playerId].name = newName;
   }
 
   getCourseData() {
@@ -70,12 +63,5 @@ export class CardComponent implements OnInit {
     this.game.players[playerId].totals.in = intotal;
     this.game.players[playerId].totals.out = outtotal;
     this.game.players[playerId].totals.total = total;
-  }
-
-  updateGameName(element) {
-    this.show = false;
-    const name = element.value;
-    this.game.name = name;
-    this.gameService.saveGame(this.gameId, this.game)
   }
 }
