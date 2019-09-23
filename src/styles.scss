@@ -1,26 +1,10 @@
-@import '@angular/material/prebuilt-themes/pink-bluegrey.css';
-
 html, body {
   height: 100%;
   width: 100%;
   padding: 0;
   margin: 0;
-}
-
-.flex {
-  display: flex;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.content-center {
-  justify-content: center;
-}
-
-.column {
-  flex-direction: column;
+  max-width: auto;
+  margin: auto;
 }
 
 .image {
@@ -32,18 +16,3 @@ html, body {
   background-size: cover;
   background-position-x: right;
 }
-
-i {
-  outline: none;
-  cursor: pointer;
-}
-
-div {
-  outline: none;
-}
-
-span {
-  outline: none;
-}
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, sans-serif; }

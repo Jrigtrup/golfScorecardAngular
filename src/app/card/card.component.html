@@ -16,40 +16,11 @@
         </div>
         <div>Handicap</div>
         <div>Par</div>
-        <div
-          (blur)="editPlayerName($event)"
-          contenteditable="true"
-          id="0"
-          #id0
-          [textContent]="(game.players[0].name | duplicateName:0:id0)"
-        ></div>
-        <div
-          (blur)="editPlayerName($event)"
-          contenteditable="true"
-          id="1"
-          #id1
-          [textContent]="(game.players[1].name | duplicateName:1:id1)"
-        ></div>
-        <div
-          (blur)="editPlayerName($event)"
-          contenteditable="true"
-          id="2"
-          #id2
-          [textContent]="(game.players[2].name  | duplicateName:2:id2)"
-        ></div>
-        <div
-          (blur)="editPlayerName($event)"
-          contenteditable="true"
-          id="3"
-          #id3
-          [textContent]="(game.players[3].name  | duplicateName:3:id3)"
-        ></div>
       </div>
 
       <div class="scores">
         <div id="h{{ hole.hole }}" *ngFor="let hole of holes">
           <div>{{ hole.hole }}</div>
-
 
           <div [ngClass]="[tee]" class="box" id="tee{{ hole.hole }}" *ngIf="courseId == '18300'">
             {{ tee == 'pro' ? hole.teeBoxes[0].yards : tee == 'champion' ? hole.teeBoxes[1].yards : tee == 'men' ? hole.teeBoxes[2].yards : hole.teeBoxes[3].yards }}
@@ -148,38 +119,4 @@
       </div>
     </div>
   </div>
-</div>
-
-<button
-  *ngIf="data"
-  type="button"
-  mat-raised-button
-  id="save"
-  (click)="saveGame()"
->
-  SAVE
-</button>
-
-<div class="configurations" *ngIf="show">
-  <div id="numberOfPlayers">
-    <div class="closeButton" onclick="closeSave()">&#215;</div>
-    <span>Enter New Game Name</span>
-    <form id="teeForm">
-      <input #name type="text" />
-    </form>
-    <button mat-raised-button id="continue" (click)="updateGameName(name)">
-      CONTINUE
-    </button>
-  </div>
-</div>
-
-<div *ngIf="savepop" class="saved">
-  <span>Your scorecard has been saved!</span>
-  <i (click)="hide()" class="material-icons" id="closepop">
-    close
-  </i>
-</div>
-
-<div *ngIf="!data" class="loadingIcon">
-  <i class="fa fa-spinner fa-spin"></i>
 </div>

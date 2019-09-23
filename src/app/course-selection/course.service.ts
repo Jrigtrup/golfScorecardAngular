@@ -25,12 +25,3 @@ export class CourseService {
     return this.httpClient.get(url)
   }
 }
-
-
-// courseUrl = "http://golf-courses-api.herokuapp.com";
-
-// getCourses(): Observable<Object> {
-//   const courses = this.httpClient.get(this.courseUrl);
-//   console.log(courses);
-//   return courses;
-// }

@@ -1,4 +1,4 @@
-import { Component, OnInit, ɵConsole } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CourseService } from '../course-selection/course.service';
 import { ActivatedRoute } from '@angular/router';
 import { GameService } from '../game.service';
@@ -25,7 +25,6 @@ export class CardComponent implements OnInit {
 
   ngOnInit() {
     this.gameId = this.route.snapshot.paramMap.get('id');
-    this.getSavedGame(this.gameId);
   }
 
   editPlayerName(element) {
@@ -34,26 +33,12 @@ export class CardComponent implements OnInit {
     this.game.players[playerId].name = newName;
   }
 
-  getSavedGame(id) {
-    this.gameService
-    .getSavedGame(id)
-    .subscribe(data => {
-      // console.log(data);
-      this.game = data;
-      this.courseId = data.course;
-      this.tee = data.tee;
-      console.log(this.tee);
-      this.getCourseData();
-    });
-  }
-
   getCourseData() {
     this.courseService
     .getGolfCourse(this.courseId)
     .subscribe(data => {
       this.data = data.data;
       this.holes = data.data.holes;
-      console.log(this.data);
     });
   }
 
@@ -75,7 +60,6 @@ export class CardComponent implements OnInit {
     let outtotal = 0;
     let intotal = 0;
     let total = 0;
-    console.log(this.game.players[playerId]);
     for(let i = 0; i <= 8; i++) {
       outtotal += this.game.players[playerId].scores[i];
     }
@@ -94,24 +78,4 @@ export class CardComponent implements OnInit {
     this.game.name = name;
     this.gameService.saveGame(this.gameId, this.game)
   }
-
-  saveGame() {
-    if(!this.game.name) {
-      this.show = true;
-    }
-    else {
-      this.show = false;
-      this.savepop = true;
-      this.gameService.saveGame(this.gameId, this.game)
-    }
-  }
-
-  closeSave() {
-    this.show = false;
-  }
-
-  hide() {
-    this.savepop = false;
-  }
-
 }

@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { CourseSelectionComponent } from './course-selection/course-selection.component';
 import { CardComponent } from './card/card.component';
 import { FormComponent } from './form/form.component';
-import { DuplicateNamePipe } from './pipes/duplicate-name.pipe';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from 'src/environments/environment';
@@ -20,7 +19,6 @@ import { SavedGamesComponent } from './saved-games/saved-games.component';
     CourseSelectionComponent,
     CardComponent,
     FormComponent,
-    DuplicateNamePipe,
     SavedGamesComponent,
   ],
   imports: [
@@ -35,7 +33,6 @@ import { SavedGamesComponent } from './saved-games/saved-games.component';
     MatCardModule,
     MatButtonModule,
   ],
-  providers: [ DuplicateNamePipe ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

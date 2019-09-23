@@ -1,15 +1,1 @@
-<div class="configurations" *ngIf="savedGames">
-  <div id="numberOfPlayers">
-    <div class="closeButton" (click)="goBack()">&#215;</div>
-    <span>{{ savedGames?.length > 0 ? 'Select a Scorecard' : 'No previous games'}}</span>
-    <button mat-button *ngIf="savedGames?.length == 0" [routerLink]="['']">New Game</button>
-    <form *ngFor="let game of savedGames">
-      <div>
-        <button
-          type="button" mat-raised-button [routerLink]="['/card', game.id]">
-          {{ game.name }}
-        </button>
-      </div>
-    </form>
-  </div>
-</div>
+<div>this works ..... kinda..... i never got around to this part...... =(</div>

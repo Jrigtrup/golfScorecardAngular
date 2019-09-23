@@ -5,44 +5,29 @@
   align-items: center;
 }
 
-.configurations {
+.difficulty {
   @include centerDisplay();
   flex-direction: column;
-  height: 100%;
-  width: 100%;
 }
 .closeButton {
-  font-size: 75px;
-  text-align: center;
+  font-size: 35px;
   position: absolute;
   top: 5px;
-  right: 30px;
+  left: 30px;
 }
 
 #numberOfPlayers {
-  @include centerDisplay();
   flex-direction: column;
-  span {
-    font-size: 72px;
-    margin-bottom: 15px;
-  }
-  form {
-    text-align: center;
-    font-size: 32px;
-    display: flex;
-    flex-direction: column;
-  }
-  #continue {
-    margin-top: 20px;
-    padding: 3px 25px;
-    font-size: 15px;
-  }
-  button {
-    font-size: 18px;
-    padding: 5px 75px;
-    margin-top: 15px;
-    text-align: center;
-    border: none;
-    outline: none;
-  }
+  font-size: 50px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  font-size: 18px;
+  margin-top: 15px;
+  text-align: center;
 }

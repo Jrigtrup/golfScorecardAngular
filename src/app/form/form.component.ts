@@ -28,15 +28,8 @@ export class FormComponent implements OnInit {
     this.createNewGame();
   }
 
-  edit(teeType) {
-    this.tee = teeType.target.id;
-    this.gameService.updateTee(this.tee, this.gameId);
-    this.location.back();
-  }
-
   createNewGame() {
     const docId = uuid.v4();
-    console.log(this.tee);
     this.gameService.createNewGame(this.courseId, this.tee, docId)
     .then(_ => this.router.navigate(['/card', docId]));
   }

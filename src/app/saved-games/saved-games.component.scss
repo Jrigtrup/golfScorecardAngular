@@ -5,25 +5,15 @@
   align-items: center;
 }
 
-.configurations {
-  @include centerDisplay();
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(219, 223, 233, 0.9);
-  .closeButton {
-    font-size: 75px;
-    text-align: center;
-    position: absolute;
-    top: 5px;
-    right: 30px;
-    cursor: pointer;
-  }
+.closeButton {
+  font-size: 30px;
+  position: absolute;
+  left: 30px;
 }
 
 #numberOfPlayers {
-  @include centerDisplay();
   flex-direction: column;
+}
   span {
     font-size: 72px;
     margin-bottom: 15px;
@@ -34,21 +24,10 @@
     font-size: 32px;
     display: flex;
     flex-direction: column;
+  }
     div {
       display: flex;
       align-items: center;
       justify-content: center;
       margin-top: 15px;
-    }
   }
-}
-
-button {
-  font-size: 18px;
-  padding: 5px 75px;
-  text-align: center;
-  border: none;
-  outline: none;
-  background-color: cadetblue;
-  color: white;
-}
